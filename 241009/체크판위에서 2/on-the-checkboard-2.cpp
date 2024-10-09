@@ -26,7 +26,7 @@ int main() {
                 if (arr[i][j] == 'B'){
                     for(int k = i+1; k < R-1; k++){
                         for(int l = j+1; l < C-1; l++){
-                            if(arr[k][l] == 'W'){
+                            if(arr[k][l] == 'W' & arr[R-1][C-1] == 'B'){
                                 result += 1;
                             }
 
@@ -42,7 +42,7 @@ int main() {
                 if (arr[i][j] == 'W'){
                     for(int k = i+1; k < R-1; k++){
                         for(int l = j+1; l < C-1; l++){
-                            if(arr[k][l] == 'B'){
+                            if(arr[k][l] == 'B' & arr[R-1][C-1] == 'W'){
                                 result += 1;
                             }
 
