@@ -3,9 +3,6 @@
 #include <algorithm>
 using namespace std;
 
-int n = 5;
-int arr[5] = {1, 5, 2, 6, 8};
-
 int main() {
     int max_sum = 0;
     for(int i = 0; i < n; i++) {
