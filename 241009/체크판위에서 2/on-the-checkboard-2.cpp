@@ -20,14 +20,29 @@ int main() {
     int start_C = 0;
     int result = 0;
 
-    if(arr[0][0] == 'W'){
-        
+    if(arr[0][0] == 'W'){       
         for(int i = 1; i < R-2; i++){
             for(int j = 1; j < C-2; j++){
                 if (arr[i][j] == 'B'){
                     for(int k = i+1; k < R-1; k++){
                         for(int l = j+1; l < C-1; l++){
                             if(arr[k][l] == 'W'){
+                                result += 1;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    if(arr[0][0] == 'B'){       
+        for(int i = 1; i < R-2; i++){
+            for(int j = 1; j < C-2; j++){
+                if (arr[i][j] == 'W'){
+                    for(int k = i+1; k < R-1; k++){
+                        for(int l = j+1; l < C-1; l++){
+                            if(arr[k][l] == 'B'){
                                 result += 1;
                             }
 
