@@ -1,22 +1,27 @@
 #include <iostream>
 #include <cstdlib>
 #include <algorithm>
+#include <climits>
 using namespace std;
 
 int main() {
-    int max_sum = 0;
-    for(int i = 0; i < n; i++) {
-        arr[i] *= 2;
-    
-        int sum_diff = 0;
-        for(int j = 0; j < n - 1; j++)
-            sum_diff += abs(arr[j + 1] - arr[j]);
-    
-        max_sum = max(max_sum, sum_diff);
-        arr[i] /= 2;
+    int n;
+    cin >> n;
+    int arr[n];
+    int min_result = INT_MAX;
+    for(int i = 0; i < n;i++){
+        cin >> arr[i];
+    }
+
+    for(int i = 0; i < n; i++){
+        int result = 0;
+        for(int j = 0; j < n; j++){
+            result += abs(j-i) * arr[j];
+        }
+        min_result = min(min_result,result);
     }
     
-    cout << max_sum;
+    cout << min_result;
     
     return 0;
 }
