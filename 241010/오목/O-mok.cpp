@@ -49,15 +49,24 @@ int main() {
             cin >> pan[i][j];
         }
     }
-
+    int win_flag = 0;
     for(int i = 2; i < 17; i++){
         for(int j = 2; j < 17; j++){
             int flag = someone_win(pan,i,j);
             if(flag != 0){
                 cout << flag << endl;
                 cout << i+1<< " " << j+1<< endl;
+                win_flag = 1;
+                break;
             }
         }
+        if(win_flag == 1){
+            break;
+        }
     }
+    if(win_flag == 0){
+        cout << 0 << endl;
+    }
+    
     return 0;
 }
