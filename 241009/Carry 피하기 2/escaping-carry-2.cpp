@@ -21,7 +21,7 @@ int carry_count(int a, int b, int c){
     cc[2] = (c/10)%10;
     cc[3] = c%10;
     
-    for(int i = 3; i > 0; i--){
+    for(int i = 3; i >= 0; i--){
         
         if(aa[i] + bb[i] + cc[i] >= 10){
             return 0;
